@@ -4,41 +4,45 @@
 #include <cmath>
 
 // 乱数初期化カーネル
-__global__ void init_rand_kernel(curandState* state, unsigned long seed, int num_electrons) {
+__global__ void init_rand_kernel(curandState* state, unsigned long seed, int num_electrons) 
+{
     int idx = blockIdx.x * blockDim.x + threadIdx.x;
-    if (idx < num_electrons) {
+    if (idx < num_electrons) 
+    {
         curand_init(seed, idx, 0, &state[idx]);
     }
 }
 
 // 電子の衝突位置を計算するカーネル
-// 15行目：関数の開始 {
-__global__ void sample_electrons_kernel(int* d_counts, curandState* state, int num_electrons, int width, float d, float w) {
+__global__ void sample_electrons_kernel(int* d_counts, curandState* state, int num_electrons, int width, float d, float w) 
+{
     int idx = blockIdx.x * blockDim.x + threadIdx.x;
-    if (idx >= num_electrons) return;
-
+    if (idx >= num_electrons)
+    {
+        return;
+    }
     curandState local_state = state[idx];
     float pi = 3.1415926535f;
 
-    while (true) { // 22行目：whileの開始 {
+    while (true) 
+    {
         float x = (curand_uniform(&local_state) - 0.5f) * width;
 
         float interference = cosf(pi * d * x / 800.0f);
         float diffraction = (x == 0.0f) ? 1.0f : sinf(pi * w * x / 800.0f) / (pi * w * x / 800.0f);
         float intensity = (interference * interference) * (diffraction * diffraction);
 
-        if (curand_uniform(&local_state) < intensity) { // 32行目：ifの開始 {
+        if (curand_uniform(&local_state) < intensity) 
+        { 
             int screen_x = static_cast<int>(x + width / 2.0f);
-            if (screen_x >= 0 && screen_x < width) {
+            if (screen_x >= 0 && screen_x < width) 
+            {
                 atomicAdd(&d_counts[screen_x], 1);
             }
             break;
-        } // 🌟 38行目：ここでifを閉じる }
-    } // 🌟 39行目：ここでwhileを閉じる }
-
-    state[idx] = local_state; // 🌟 41行目：ここは関数の内側なのでidxが正常に認識されます
-
-    // 🌟 42行目：ここで大元の関数（sample_electrons_kernel）を閉じる 
+        }
+    }
+    state[idx] = local_state;
 }
 
 
@@ -57,7 +61,10 @@ extern "C" void run_cuda_simulation(int* h_counts, int width, int num_electrons,
     }
     if (d_counts == nullptr || last_width != width) 
     {
-        if (d_counts) cudaFree(d_counts);
+        if (d_counts != 0) 
+        {
+            cudaFree(d_counts);
+        }
         cudaMalloc((void**)&d_counts, width * sizeof(int));
         cudaMemset(d_counts, 0, width * sizeof(int));
         last_width = width;
@@ -66,22 +73,19 @@ extern "C" void run_cuda_simulation(int* h_counts, int width, int num_electrons,
     // カウント配列を毎フレームのインクリメント用にホストから同期（リセット対応のため）
     cudaMemcpy(d_counts, h_counts, width * sizeof(int), cudaMemcpyHostToDevice);
 
-    // カーネル実行
-//    int threads = 256;
+    // カーネル実行(※<<< >>> に近い所では、コメントの後に１行開けること！ nvcc構文解析のバグ回避)
+    // <<< >>> は勝手に < << > >> に変わることがあるので、ソース修正時には常に監視すること。 (Visual Studio のソースコードの構文自動修正の余計な処理対策)
 
-    int test = 256;
-
-
-    int blocks = (num_electrons + test - 1) / test;
-//    int blocks = (num_electrons + threads - 1) / threads;
-    sample_electrons_kernel<<<blocks, test>>>(d_counts, d_rand_states, num_electrons, width, d, w);
-//    sample_electrons_kernel << <blocks, threads >> > (d_counts, d_rand_states, num_electrons, width, d, w);
+    int threads = 256;
+    int blocks = (num_electrons + threads - 1) / threads;
+    sample_electrons_kernel<<<blocks, threads>>>(d_counts, d_rand_states, num_electrons, width, d, w);
 
     // 計算結果をCPU（OpenCV側）に回収
     cudaMemcpy(h_counts, d_counts, width * sizeof(int), cudaMemcpyDeviceToHost);
 }
 
 // メモリ解放用
-extern "C" void free_cuda_simulation() {
+extern "C" void free_cuda_simulation() 
+{
     // 終了時にクリーンアップしたい場合用
 }

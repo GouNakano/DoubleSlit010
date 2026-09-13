@@ -1,0 +1,40 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\program files\\nvidia gpu computing toolkit\\cuda\\v13.3\\include\\cuda_runtime_api.h",
+        "ProvidedModule": "",
+        "Includes": [
+            "c:\\program files\\nvidia gpu computing toolkit\\cuda\\v13.3\\include\\crt\\host_defines.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\ctype.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\corecrt.h",
+            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\vcruntime.h",
+            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\sal.h",
+            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\concurrencysal.h",
+            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\vadefs.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\corecrt_wctype.h",
+            "c:\\program files\\nvidia gpu computing toolkit\\cuda\\v13.3\\include\\builtin_types.h",
+            "c:\\program files\\nvidia gpu computing toolkit\\cuda\\v13.3\\include\\device_types.h",
+            "c:\\program files\\nvidia gpu computing toolkit\\cuda\\v13.3\\include\\crt\\host_defines.h",
+            "c:\\program files\\nvidia gpu computing toolkit\\cuda\\v13.3\\include\\driver_types.h",
+            "c:\\program files\\nvidia gpu computing toolkit\\cuda\\v13.3\\include\\crt\\host_defines.h",
+            "c:\\program files\\nvidia gpu computing toolkit\\cuda\\v13.3\\include\\vector_types.h",
+            "c:\\program files\\nvidia gpu computing toolkit\\cuda\\v13.3\\include\\crt\\host_defines.h",
+            "c:\\program files\\microsoft visual studio\\18\\community\\vc\\tools\\msvc\\14.51.36231\\include\\limits.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\stddef.h",
+            "c:\\program files\\nvidia gpu computing toolkit\\cuda\\v13.3\\include\\surface_types.h",
+            "c:\\program files\\nvidia gpu computing toolkit\\cuda\\v13.3\\include\\driver_types.h",
+            "c:\\program files\\nvidia gpu computing toolkit\\cuda\\v13.3\\include\\texture_types.h",
+            "c:\\program files\\nvidia gpu computing toolkit\\cuda\\v13.3\\include\\driver_types.h",
+            "c:\\program files\\nvidia gpu computing toolkit\\cuda\\v13.3\\include\\vector_types.h",
+            "c:\\program files\\nvidia gpu computing toolkit\\cuda\\v13.3\\include\\cuda_device_runtime_api.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\stdlib.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\corecrt_malloc.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\corecrt_search.h",
+            "c:\\program files (x86)\\windows kits\\10\\include\\10.0.26100.0\\ucrt\\corecrt_wstdlib.h",
+            "c:\\program files\\nvidia gpu computing toolkit\\cuda\\v13.3\\include\\driver_types.h",
+            "c:\\program files\\nvidia gpu computing toolkit\\cuda\\v13.3\\include\\crt\\host_defines.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -1,7 +1,7 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\users\\gosan\\documents\\projects12\\doubleslit\\kernel.cu",
+        "Source": "d:\\users\\gosan\\documents\\projects12\\doubleslit010\\kernel.cu",
         "ProvidedModule": "",
         "Includes": [
             "c:\\program files\\nvidia gpu computing toolkit\\cuda\\v13.3\\include\\cuda_runtime.h",
