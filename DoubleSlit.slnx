@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="DoubleSlit.vcxproj" Id="a56cd33d-b0d7-40c3-abfc-267f4fa3dc88" />
+</Solution>

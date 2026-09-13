@@ -1,0 +1,60 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+*.dcu
+*.ilc
+*.ild
+*.ilf
+*.ils
+*.tds
+*.pch
+*.dsk
+*.autosave
+*.pyc
+*.user
+*~
+.*.swp
+.DS_Store
+.sw[a-z]
+Thumbs.db
+tags
+tegra/
+.download*
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+
+# Executables
+*.out
+*.app
+*.exe
+*.onnx
+*.vs
+*.dll
+*.nupkg
+# Folders
+__astcache/
+__history/
+__recovery/
+.download/
+packages/
+.vs/
+RemoveBackground/

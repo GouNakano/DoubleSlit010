@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "DoubleSlit\\x64\\Debug\\DoubleSlit.obj",
+            "outputs": [
+                "DoubleSlit\\x64\\Debug\\DoubleSlit.cpp.obj.dt.module.json",
+                "DoubleSlit\\x64\\Debug\\DoubleSlit.cpp.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}
