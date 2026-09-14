@@ -50,6 +50,7 @@ tegra/
 *.vs
 *.dll
 *.nupkg
+*.avi
 # Folders
 __astcache/
 __history/
