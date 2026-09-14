@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "DoubleSlit\\x64\\Debug\\__msvc_chrono.obj",
+            "outputs": [
+                "DoubleSlit\\x64\\Debug\\__msvc_chrono.hpp.obj.dt.module.json",
+                "DoubleSlit\\x64\\Debug\\__msvc_chrono.hpp.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}

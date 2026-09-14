@@ -3,6 +3,7 @@
 #include <device_launch_parameters.h>
 #include <cmath>
 
+
 // 乱数初期化カーネル
 __global__ void init_rand_kernel(curandState* state, unsigned long seed, int num_electrons) 
 {
@@ -45,9 +46,8 @@ __global__ void sample_electrons_kernel(int* d_counts, curandState* state, int n
     state[idx] = local_state;
 }
 
-
 // C++（main.cpp）から呼ぶためのラッパー関数
-extern "C" void run_cuda_simulation(int* h_counts, int width, int num_electrons, float d, float w, unsigned long seed) 
+void run_cuda_simulation(int* h_counts, int width, int num_electrons, float d, float w, unsigned long seed)
 {
     static curandState* d_rand_states = nullptr;
     static int* d_counts = nullptr;
