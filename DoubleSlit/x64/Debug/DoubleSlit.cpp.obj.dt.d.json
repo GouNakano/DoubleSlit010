@@ -311,7 +311,9 @@
             "d:\\opencv\\build\\include\\opencv2\\stitching\\detail\\blenders.hpp",
             "d:\\opencv\\build\\include\\opencv2\\video.hpp",
             "d:\\opencv\\build\\include\\opencv2\\video\\tracking.hpp",
-            "d:\\opencv\\build\\include\\opencv2\\video\\background_segm.hpp"
+            "d:\\opencv\\build\\include\\opencv2\\video\\background_segm.hpp",
+            "d:\\users\\gosan\\documents\\projects12\\doubleslit010\\tdoubleslit.h",
+            "d:\\users\\gosan\\documents\\projects12\\doubleslit010\\doubleslitconst.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

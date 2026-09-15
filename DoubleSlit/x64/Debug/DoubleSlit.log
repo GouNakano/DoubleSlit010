@@ -1,8 +1,14 @@
-﻿  DoubleSlit.cpp
+﻿  main.cpp
+D:\Users\gosan\Documents\Projects12\DoubleSlit010\TDoubleSlit.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
 D:\opencv\build\include\opencv2\features.hpp(560,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  (ソース ファイル 'DoubleSlit.cpp' をコンパイルしています)
+  (ソース ファイル 'main.cpp' をコンパイルしています)
   
 D:\opencv\build\include\opencv2\imgcodecs.hpp(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
-  (ソース ファイル 'DoubleSlit.cpp' をコンパイルしています)
+  (ソース ファイル 'main.cpp' をコンパイルしています)
+  
+D:\Users\gosan\Documents\Projects12\DoubleSlit010\DoubleSlitConst.h(1,1): warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+  (ソース ファイル 'main.cpp' をコンパイルしています)
   
   DoubleSlit.vcxproj -> D:\Users\gosan\Documents\Projects12\DoubleSlit010\x64\Debug\DoubleSlit.exe
