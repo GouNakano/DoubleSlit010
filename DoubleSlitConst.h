@@ -2,8 +2,8 @@
 #define TDOUBLE_SLIT_CONST_H
 
 //描画スクリーンのサイズ
-constexpr const int WIDTH = 640;
-constexpr const int HEIGHT = 720;
+constexpr const int WIDTH = 560;
+constexpr const int HEIGHT = 640;
 //1秒あたりのフレーム数
 constexpr const int FPS = 30;
 //録画秒数
