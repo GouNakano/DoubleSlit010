@@ -8,7 +8,6 @@
 #include <sstream>
 #include <iomanip>
 #include <opencv2/opencv.hpp>
-
 #include "TDoubleSlit.h"
 
 using namespace std::chrono;
@@ -57,7 +56,7 @@ bool TDoubleSlit::use_cuda_cpp_func()
 		// 計算時間計測開始
         std::chrono::time_point<std::chrono::high_resolution_clock> calc_start = std::chrono::high_resolution_clock::now();
         
-        // 1. CUDAを呼び出してX座標の着弾カウントを更新
+        // CUDAを呼び出してX座標の着弾カウントを更新
         run_cuda_simulation(col_counts.data(), WIDTH, GPU_ELECTRONS_PER_FRAME, static_cast<float>(SLIT_DISTANCE), static_cast<float>(SLIT_WIDTH), rd());
 
         auto calc_end = std::chrono::high_resolution_clock::now();
@@ -91,9 +90,9 @@ bool TDoubleSlit::use_cuda_cpp_func()
 		//スクリーンの描画
         cv::imshow(window_name, display_mat);
 
-        //30fps（約33ms）に近い速度で画面をプレビュー表示させる
+		//描画を確実に行うためのウェイトを入れる
         //このウェイトはシミュレーション時間の対象外とする
-        cv::waitKey(30);
+        cv::waitKey(3);
     }
     //録画終了
     writer.release();

@@ -7,6 +7,7 @@
 #include <opencv2/opencv.hpp>
 #include "DoubleSlitConst.h"
 
+//二重スリットシミュレーションを行うクラス
 class TDoubleSlit
 {
 private:
@@ -22,6 +23,12 @@ private:
 	std::vector<int> col_counts;
 	//ウィンドウ名
 	std::string window_name;
+	//CUDA用の乱数状態を保持するデバイスメモリポインタ
+	void *d_rand_states = nullptr;
+	//CUDA用の列ごとの数を保持するデバイスメモリポインタ
+	int *d_counts = nullptr;
+	//前回のフレームの幅を保持する変数
+	int last_width = 0;
 private:
 	//録画準備
 	cv::VideoWriter prepare_video_writer(bool isCuda);
@@ -43,6 +50,8 @@ public:
 public:
 	//CUDAを用いて処理するC++側処理
 	bool use_cuda_cpp_func();
+	//CUDA終了時の後処理（GPUメモリ解放）
+	void end_cuda_simulation();
 	//CUDAなしの処理（C++23標準 CPUシングルスレッド処理）
 	bool none_cuda_cpp_func();
 };

@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "DoubleSlit\\x64\\Debug\\curand_poisson.obj",
+            "outputs": [
+                "DoubleSlit\\x64\\Debug\\curand_poisson.h.obj.dt.module.json",
+                "DoubleSlit\\x64\\Debug\\curand_poisson.h.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}
