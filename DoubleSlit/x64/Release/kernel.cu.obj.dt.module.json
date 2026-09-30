@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "DoubleSlit\\x64\\Release\\kernel.obj",
+            "outputs": [
+                "DoubleSlit\\x64\\Release\\kernel.cu.obj.dt.module.json",
+                "DoubleSlit\\x64\\Release\\kernel.cu.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}
