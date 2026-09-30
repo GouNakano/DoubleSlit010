@@ -63,7 +63,7 @@ void TDoubleSlit::run_cuda_simulation(int* h_counts, int width, int num_electron
     }
     if (d_counts == nullptr || last_width != width) 
     {
-        if (d_counts != 0) 
+        if (d_counts != nullptr)
         {
             cudaFree(d_counts);
         }
