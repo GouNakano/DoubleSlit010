@@ -45,7 +45,7 @@
 コマンドプロンプトや PowerShell を開き、以下のコマンドを実行してリポジトリをクローンします。
 
 ```bash
-git clone https://github.com
+git clone https://github.com/GouNakano/DoubleSlit010.git
 cd DoubleSlit010
 ```
 
