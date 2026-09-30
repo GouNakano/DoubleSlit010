@@ -15,9 +15,8 @@
 
 ### 🎥 ポートフォリオ動画
 実際の動作の様子や、より詳細なデモは以下のYouTube動画からご覧いただけます（画像をクリックすると動画が再生されます）。
-
-[![ポートフォリオ動画](https://youtube.com)](https://youtube.com)
-
+<br>
+**[[ポートフォリオ動画]](https://www.youtube.com/watch?v=nZsjhfOL1MI)**
 ---
 
 ## 📌 特徴
